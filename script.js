@@ -1,0 +1,1 @@
+window.alert(Would you like to play Rock, paper, scissors?)
