@@ -17,7 +17,7 @@ function countdown() {
   }
 }
 
-
+window.alert("Ready to start?");
 
 var score = 0;
 var questions = [
