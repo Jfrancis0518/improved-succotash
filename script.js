@@ -1,11 +1,11 @@
 //var correct = 0
 //var incorrect = 0 
 
+//original timer
+//var timeLeft = 30;
+//var elem = document.getElementById('Timer');
 
-var timeLeft = 30;
-var elem = document.getElementById('Timer');
-
-var timerId = setInterval(countdown, 1000);
+//var timerId = setInterval(countdown, 1000);
 
 function countdown() {
   if (timeLeft == 0) {
@@ -16,6 +16,8 @@ function countdown() {
     timeLeft--;
   }
 }
+
+
 
 var score = 0;
 var questions = [
