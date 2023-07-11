@@ -23,6 +23,21 @@ var questions = [
         answer: "c"
     },
 ]
+var timeLeft = 30;
+var elem = document.getElementById('Timer');
+
+Var TimerId = setInterval(countdown, 1000);
+
+function countdown() {
+    if (timeleft ==0) {
+        clearTimeout(timerId);
+        doSomething();
+    } else {
+        elem.innerHTML = timeLeft + ' seconds remaining';
+        timeLeft--;
+}
+    }
+
 for(var i=0; 1 < questions.length; i++){
  var response = window.prompt(questions[i].prompt)
  if(response == questions [i].answer){
