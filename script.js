@@ -1,24 +1,20 @@
 //var correct = 0
 //var incorrect = 0 
 
-//original timer
-//var timeLeft = 30;
-//var elem = document.getElementById('Timer');
+function startCountdown(seconds) {
+let counter = seconds;
 
-//var timerId = setInterval(countdown, 1000);
-window.alert("Ready to start?");
+const interval = setInterval() => {
+console.log(counter);
+coumter--
 
-
-function countdown() {
-  if (timeLeft == 0) {
-    clearTimeout(timerId);
-    doSomething();
-  } else {
-    elem.innerHTML = timeLeft + ' seconds remaining';
-    timeLeft--;
-  }
+if (counter < 0) {
+    clearInterval(interval);
+    console.log("Complete!")
+    startCountdown(60);
 }
-
+}, 1000;
+};
 
 var score = 0;
 var questions = [
