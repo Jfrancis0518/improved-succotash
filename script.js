@@ -6,6 +6,8 @@
 //var elem = document.getElementById('Timer');
 
 //var timerId = setInterval(countdown, 1000);
+window.alert("Ready to start?");
+
 
 function countdown() {
   if (timeLeft == 0) {
@@ -17,7 +19,6 @@ function countdown() {
   }
 }
 
-window.alert("Ready to start?");
 
 var score = 0;
 var questions = [
