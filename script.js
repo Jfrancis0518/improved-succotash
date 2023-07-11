@@ -1,5 +1,22 @@
 //var correct = 0
 //var incorrect = 0 
+
+
+var timeLeft = 30;
+var elem = document.getElementById('Timer');
+
+var timerId = setInterval(countdown, 1000);
+
+function countdown() {
+  if (timeLeft == 0) {
+    clearTimeout(timerId);
+    doSomething();
+  } else {
+    elem.innerHTML = timeLeft + ' seconds remaining';
+    timeLeft--;
+  }
+}
+
 var score = 0;
 var questions = [
     {
@@ -7,11 +24,11 @@ var questions = [
         answer: "d" 
     },
     {
-        Prompt: "What do we use to allow CSS amd JavaScript to select and access specific elements?\n(a) Class\n\ (b) Src\n\ (c) alt\n(d) Semantic tags",
+        prompt: "What do we use to allow CSS amd JavaScript to select and access specific elements?\n(a) Class\n\ (b) src\n\ (c) alt\n(d) Semantic tags",
         amswer: "a"
     },
     {
-        Prompt: "which of the following formats are used for highligting text? \n(a) sub\n\ (b) mark\n (c) del\n\ (d)em",
+        prompt: "which of the following formats are used for highligting text? \n(a) sub\n\ (b) mark\n (c) del\n\ (d)em",
         answer: "b"
     },
     {
@@ -23,20 +40,6 @@ var questions = [
         answer: "c"
     },
 ]
-var timeLeft = 30;
-var elem = document.getElementById('Timer');
-
-Var TimerId = setInterval(countdown, 1000);
-
-function countdown() {
-    if (timeleft ==0) {
-        clearTimeout(timerId);
-        doSomething();
-    } else {
-        elem.innerHTML = timeLeft + ' seconds remaining';
-        timeLeft--;
-}
-    }
 
 for(var i=0; 1 < questions.length; i++){
  var response = window.prompt(questions[i].prompt)
@@ -47,7 +50,7 @@ for(var i=0; 1 < questions.length; i++){
         alert("Incorrect!");
     }
 }
-//alert("Congratulations! you got" + score + "/" + question.lengths);
+alert("Congratulations! you got" + score + "/" + question.lengths);
 //var startQuiz = function() {
     //
 //}
