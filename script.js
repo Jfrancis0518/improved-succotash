@@ -1,12 +1,13 @@
 //var correct = 0
 //var incorrect = 0 
+var score = 0;
 var questions = [
     {
         prompt: "Which of this options control the styling for a webpage?\n(a) HTML\n\ (b) Photoshop\n\ (c) Google\n(d) CSS",
         answer: "d" 
     },
     {
-        Prompt: "What do we use to allow CSS amd JavaScript to select and access specific elements?\n(a) Class\n\ (b) Src\n (c) alt\n (d) Semantic tags",
+        Prompt: "What do we use to allow CSS amd JavaScript to select and access specific elements?\n(a) Class\n\ (b) Src\n\ (c) alt\n(d) Semantic tags",
         amswer: "a"
     },
     {
@@ -18,11 +19,20 @@ var questions = [
         answer: "d"
     },
     {
-        prompt: "What is A programming language originally created to be run in the browser with the intention of enhancing a webpage's capabilities?\n\(a) JavaScript\n\ (b) CSS\n\ (c) conditional statements\n (d)HTML",
-        answer: "a"
+        prompt: "What is A programming language originally created to be run in the browser with the intention of enhancing a webpage's capabilities?\n\(a) conditional statements\ (b) CSS\n\ (c) JavaScript\n (d)HTML",
+        answer: "c"
     },
 ]
-
-var startQuiz = function() {
-    //
+for(var i=0; 1 < questions.length; i++){
+ var response = window.prompt(questions[i].prompt)
+ if(response == questions [i].answer){
+   score++;
+   alert ("Correct!");
+    } else {
+        alert("Incorrect!");
+    }
 }
+//alert("Congratulations! you got" + score + "/" + question.lengths);
+//var startQuiz = function() {
+    //
+//}
